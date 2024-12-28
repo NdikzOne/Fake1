@@ -18,7 +18,7 @@ let nt = await fetch(`https://api.tiklydown.eu.org/api/download?url=${args[0]}`)
 KETIK .ttmp3 UNTUK MENDOWNLOAD AUDIO
 ${wm}`
         console.log(vas.url[0])
-        conn.sendFile(m.chat, v.noWatermark, null, cap, m)
+        conn.sendFile(m.chat, v.noWatermark, null, capt, m)
         conn.sendMessage(m.chat, {
             react: {
                 text: "✅",
