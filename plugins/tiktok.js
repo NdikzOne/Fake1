@@ -10,7 +10,7 @@ let nt = await fetch(`https://api.tiklydown.eu.org/api/download?url=${args[0]}`)
         let vas = await nt.json()
   let v = vas.video
   let s = vas.author
-        let capt = `${spas}*「 T I K T O K 」*
+        let capt = `*「 T I K T O K 」*
 
 *📛Author:* ${s.name}
 *📒Title:* ${vas.title}
