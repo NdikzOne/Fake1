@@ -7,7 +7,7 @@ if (text.includes("www.instagram.com")) {
 } else {
     m.reply(wait)
   try {
-   let res = await (await fetch(`${webapi}api/downloader/igstory?username=${text}&apikey={apichan}`)).json()
+   let res = await (await fetch(`${webapi}api/downloader/igstory?username=${text}&apikey=${apichan}`)).json()
  for(let x of res.data){
      conn.sendFile(m.chat, x, 'mp4/video', 'Done Nih Ngab:V', m)
  }

@@ -6,13 +6,13 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 	if (!text.includes('tiktok.com')) return m.reply(`Invalid Tiktok URL.`)
     m.reply('Sabar Sedang Mengunduh Media Dari Link Tersebut Kak!')
 	try {
-		let res = await fetch(`${webapi}api/downloader/tiktok-slide?url=${text}&apikey=${apichan}`)
+		let res = await fetch(`${neNdikz}api/tiktok?url=${text}=&apikey=${neoapi}`)
 		let anu = await res.json()
 		if (anu.code != '200') throw Error(anu.message)
 		anu = anu.data
 		if (anu.length == 0) throw Error('Error : no data')
         let count = 1;
-		for(let x of anu.images){
+		for(let x of anu.photo){
             conn.sendFile(m.chat, x, 'jpeg/image', `Images Ke-${count}`, m)
             count++
         }
