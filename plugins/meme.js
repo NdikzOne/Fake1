@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, args }) => {
       "memes stiker"
   ]
   try {
-let res = await fetch(`${webapi}api/others/meme?apikey=${apichan}`)
+let res = await fetch(`${neNdikz}api/pinterest?q=${pickRandom(meme)}&apikey=${neoapi}`)
 let wes = await res.json()
                 let was = wes.data
 let cita = wes.data[Math.floor(Math.random() * was.length)]
