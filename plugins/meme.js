@@ -9,11 +9,9 @@ let handler = async (m, { conn, text, args }) => {
       "memes stiker"
   ]
   try {
-let res = await fetch(`https://api.lolhuman.xyz/api/meme/memeindo?apikey=${apichan}`)
-await conn.sendFile(m.chat, res, '', `${global.wm}`, m)
+conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/meme/memeindo?apikey=${apichan}` } })
   } catch (e) {
-      let res = await fetch(`https://api.lolhuman.xyz/api/meme/memeindo?apikey=${apichan}`)
-await conn.sendFile(m.chat, res, '', `${global.wm}`, m)
+      conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/meme/memeindo?apikey=${apichan}` } })
   }
 }
 handler.help = ['meme']
