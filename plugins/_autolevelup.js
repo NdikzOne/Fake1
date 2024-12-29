@@ -7,9 +7,7 @@ module.exports = {
 	async before(m) {
         let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://telegra.ph/file/bd49b3a2274bde2fb3c3a.jpg')
         let ppUrl = await convertToTelegraph(pp)
-        let res = await fetch(`${neNdikz}api/leveling?rank=node&level=${user.level}&picture=${ppUrl}&currentXp=${user.exp - min}&requiredXp=${max - user.exp}&name=${user.name}&apikey=${neoapi}`)
-    let vas = await res.json()
-  let v = vas.data
+        let media = `${webapi}api/canvas/levelup?pp=${ppUrl}&apikey=${apichan}`
 		let user = global.db.data.users[m.sender]
 		if (!user.autolevelup) return !0
 		let before = user.level * 1
@@ -19,7 +17,7 @@ module.exports = {
 			let chating = `*❑ L E V E L - UP*\n
 *${before}* -> *${user.level}*
 Use *.level* to check`.trim()
-			conn.sendFile(m.chat, v.url, null, chating, m)
+			conn.sendFile(m.chat, media, null, chating, m)
 			console.log(color(chating, 'pink'))
 		}
 	}
