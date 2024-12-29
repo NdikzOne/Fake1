@@ -9,21 +9,11 @@ let handler = async (m, { conn, text, args }) => {
       "memes stiker"
   ]
   try {
-let res = await fetch(`${neNdikz}api/pinterest?q=${pickRandom(meme)}&apikey=${neoapi}`)
-let wes = await res.json()
-                let was = wes.data
-let cita = wes.data[Math.floor(Math.random() * was.length)]
-   // conn.sendFile(m.chat, cita, null, "*COWOK GANTENG*\n\npencarian dari: cogan " + text, m)
-    let stiker = await createSticker(null, cita, packname, author)
-  conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
+let res = await fetch(`https://api.lolhuman.xyz/api/meme/memeindo?apikey=${apichan}`)
+await conn.sendFile(m.chat, res, '', `${global.wm}`, m)
   } catch (e) {
-      let res = await fetch(`${neNdikz}api/pinterest?q=${pickRandom(meme)}&apikey=${neoapi}`)
-let wes = await res.json()
-                let was = wes.result
-let cita = wes.data[Math.floor(Math.random() * was.length)]
-   // conn.sendFile(m.chat, cita, null, "*COWOK GANTENG*\n\npencarian dari: cogan " + text, m)
-    let stiker = await createSticker(null, cita, packname, author)
-  conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
+      let res = await fetch(`https://api.lolhuman.xyz/api/meme/memeindo?apikey=${apichan}`)
+await conn.sendFile(m.chat, res, '', `${global.wm}`, m)
   }
 }
 handler.help = ['meme']
