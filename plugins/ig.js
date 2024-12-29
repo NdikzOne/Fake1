@@ -1,9 +1,9 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args || !args[0]) throw `✳️ Contoh :\n${usedPrefix + command} https://www.tiktok.com/xxxxx`
+    if (!args || !args[0]) throw `✳️ Contoh :\n${usedPrefix + command} https://www.instagram.com/xxxxx`
     if (!(args[0].includes('http://') || args[0].includes('https://'))) return m.reply(`url invalid, please input a valid url. Try with add http:// or https://`)
-    if (!args[0].includes('tiktok.com')) return m.reply(`Invalid Tiktok URL.`)
+    if (!args[0].includes('instagram.com')) return m.reply(`Invalid instagram URL.`)
  //   if (!args[0]) throw `*• Example:* ${usedPrefix + command} https://youtu.be/xxxx`
     m.reply(wait)
 let nt = await fetch(`${neNdikz}api/ig?url=${args[0]}&apikey=${neoapi}`)
