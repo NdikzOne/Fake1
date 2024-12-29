@@ -4,7 +4,7 @@ const { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, usedPrefix, command, text }) => {
 if (!text) return conn.reply(m.chat, `text? Contoh.  .brat Jancok`, m)
 m.reply(wait)
-  let res = await fetch(`https://api.neoxr.eu/api/brat?text=${text}&apikey=dZnUOp`)
+  let res = await fetch(`${neNdikz}api/brat?text=${text}&apikey=${neoapi}`)
   let vas = await res.json()
   let v = vas.data
     
