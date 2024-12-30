@@ -182,7 +182,7 @@ checkForUpdate();
             case 'V-update':{
    let kode = await(await fetch(atob('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0ljaGFuWlgxL0NoYW5aWC9tYXN0ZXIvcHVibGljL3VwZGF0ZXMuanNvbg=='))).json()
 if (kode.status == false) return m.reply(kode.data.msg)
-var teks = '*「 CHANGELOG FOR UPDATES 」*\nServer: zxcoderid.xyz\n\n'
+var teks = '*「 CHANGELOG FOR UPDATES 」*\nServer: NdikzOne\n\n'
 let GG = 0
 for (let x of kode.data){
 teks +=`- Tanggal: ${x.date}\n- Detail Updates:\n${x.update}\n\n`
