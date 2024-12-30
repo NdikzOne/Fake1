@@ -7,9 +7,8 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
     m.reply('Sabar Sedang Mengunduh Media Dari Link Tersebut Kak!')
 	try {
 		let res = await fetch(`${neNdikz}api/tiktok?url=${args[0]}&apikey=${neoapi}`)
-		let anu = await res.json()
-		anu = anu.data
-		if (anu.length == 0) throw Error('Error : no data')
+		let tate = await res.json()
+		anu = tate.data
         let count = 1;
 		for(let x of anu.photo){
             conn.sendFile(m.chat, x, 'jpeg/image', `Images Ke-${count}`, m)
