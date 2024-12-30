@@ -12,9 +12,6 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
         let capt = `☑️`
 		for(let x of anu.photo)
             conn.sendFile(m.chat, x, 'jpeg/image', `${capt}`, m)
-	} catch (e) {
-		console.log(e)
-		throw `invalid slideshow url / media isn't available.`
 	}
 }
 
