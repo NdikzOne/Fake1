@@ -6,12 +6,19 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 	if (!text.includes('tiktok.com')) return m.reply(`Invalid Tiktok URL.`)
     m.reply('Sabar Sedang Mengunduh Media Dari Link Tersebut Kak!')
 	try {
-		let res = await fetch(`${neNdikz}api/tiktok?url=${args[0]}&apikey=${neoapi}`)
-		let tate = await res.json()
-		anu = tate.data
-        let capt = `☑️`
-		for(let x of anu.photo)
-            conn.sendFile(m.chat, x, 'jpeg/image', `${capt}`, m)
+		let res = await fetch(`${webapi}api/downloader/tiktok-slide?url=${text}&apikey=${apichan}`)
+		let anu = await res.json()
+		if (anu.code != '200') throw Error(anu.message)
+		anu = anu.data
+		if (anu.length == 0) throw Error('Error : no data')
+        let count = 1;
+		for(let x of anu.images){
+            conn.sendFile(m.chat, x, 'jpeg/image', `Images Ke-${count}`, m)
+            count++
+        }
+	} catch (e) {
+		console.log(e)
+		throw `invalid slideshow url / media isn't available.`
 	}
 }
 
