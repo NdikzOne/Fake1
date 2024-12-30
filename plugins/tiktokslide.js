@@ -9,11 +9,9 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 		let res = await fetch(`${neNdikz}api/tiktok?url=${args[0]}&apikey=${neoapi}`)
 		let tate = await res.json()
 		anu = tate.data
-        let count = 1;
-		for(let x of anu.photo){
-            conn.sendFile(m.chat, x, 'jpeg/image', `Images Ke-${count}`, m)
-            count++
-        }
+        let capt = `☑️`
+		for(let x of anu.photo)
+            conn.sendFile(m.chat, x, 'jpeg/image', `${capt}`, m)
 	} catch (e) {
 		console.log(e)
 		throw `invalid slideshow url / media isn't available.`
