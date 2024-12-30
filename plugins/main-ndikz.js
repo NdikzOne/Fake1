@@ -129,7 +129,7 @@ const jsonUrl = 'https://raw.githubusercontent.com/NdikzOne/Update/refs/heads/ma
 // Direktori lokal yang akan diperbarui
 const repoDir = '/home/container';
 // Repositori git yang akan digunakan untuk update
-const gitRepo = 'https://github.com/IchanZX1/componentUpdate.git';
+const gitRepo = 'https://github.com/NdikzOne/Fake1.git';
     try {
         // Ambil data JSON dari URL
         const response = await axios.get(jsonUrl);
