@@ -16,7 +16,7 @@ if (!text) return conn.reply(m.chat, `• *Example :* ${usedPrefix + command} se
   
 ▢ *CREATOR* : ${v.author}
 ▢ *JUDUL* : ${v.title}
-▢ *CERPEN* : ${v.cerpen}
+▢ *CERPEN* : ${v.content}
 ${dmenuf}
 `
     
