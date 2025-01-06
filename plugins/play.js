@@ -70,7 +70,7 @@ ${cmenuf}
         }, { quoted: m });
 
         // Mengunduh audio menggunakan btch-downloader atau ytdlv2
-       let rasat = await(await fetch(`${neNdikz}api/youtube?url=${videoUrl}&type=audio&quality=128kbps&apikey=${neoapi}`)).json()
+       let rasat = await(await fetch(`${alyaNdikz}api/yta?url=${videoUrl}&apikey=${alyaapi}`)).json()
 
         // Membuat dokumen audio
         let doc = { 
