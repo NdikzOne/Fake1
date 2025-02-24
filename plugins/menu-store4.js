@@ -19,9 +19,9 @@ mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: m})
 }
-handler.help = ['buysc']
+handler.help = ['belisc']
 handler.tags = ['store']
-handler.command = /^buy(sc|script)?$/i
+handler.command = /^beli(sc|script)?$/i
 
 
 module.exports = handler

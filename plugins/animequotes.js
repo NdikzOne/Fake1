@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, text, isPrems, isOwner, usedPrefix, comman
   
   let cap = `${htki}  *QUOTES ANIME* ${htka}
   
-▢ *QUOTES* : ${v.quote}
+▢ *QUOTES* : ${v.quotes}
 ▢ *CHARACTER* : ${v.character}
 ▢ *ANIME* : ${v.anime}
 ${dmenuf}
