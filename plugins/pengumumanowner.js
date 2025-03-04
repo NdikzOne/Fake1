@@ -31,5 +31,6 @@ handler.tags = ['group']
 handler.command = /^(pengumumanowner|announceowner|hiddentagownet|hidetagowner|h)$/i
 handler.group = true
 handler.limit = true
+handler.owner = true
 
 module.exports = handler
